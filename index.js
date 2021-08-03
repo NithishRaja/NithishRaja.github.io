@@ -3,11 +3,6 @@
   *
   */
 
-// Function to return id of element based on number and type
-function getTileId(number, type){
-  return "tile_"+number+"_"+type;
-}
-
 // Function to update global variables tracking clicked tiles
 function updateClickedTiles(id){
   // Case 1: no tile is clicked, update first tile
@@ -47,14 +42,6 @@ function makeFrontVisible(id){
   document.getElementById(getTileId(id, "front")).classList.replace("invisible", "visible");
 }
 
-// Function to add pair id attribute to elements
-function addPairId(){
-  // Iterate over all tiles
-  for(let id=1;id<=9;++id){
-    document.getElementById(getTileId(id, "front")).setAttribute("pair_id", pairId[id]);
-  }
-}
-
 (function(){
   // Iterate over all front tiles
   for(let i=1;i<=9;++i){
@@ -64,7 +51,6 @@ function addPairId(){
     backTile = document.getElementById(getTileId(i, "back"));
     // Add click event listener to front tile
     if(frontTile){
-      addPairId()
       frontTile.addEventListener("click", function(event){
         updateClickedTiles(i);
         updateView(i);
