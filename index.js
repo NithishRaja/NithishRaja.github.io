@@ -3,10 +3,6 @@
   *
   */
 
-// Initialise global variables to track clicked tiles
-let tile_clicked_first = undefined;
-let tile_clicked_second = undefined;
-
 // Function to return id of element based on number and type
 function getTileId(number, type){
   return "tile_"+number+"_"+type;
@@ -53,10 +49,6 @@ function makeFrontVisible(id){
 
 // Function to add pair id attribute to elements
 function addPairId(){
-  // Initialise array with pair ids
-  let pairId = [0, 1, 1, 2, 2, 3, 3, 4, 4];
-  // Shuffle pair id
-  pairId.sort(function(){ return Math.random() - 0.5; })
   // Iterate over all tiles
   for(let id=1;id<=9;++id){
     document.getElementById(getTileId(id, "front")).setAttribute("pair_id", pairId[id]);
