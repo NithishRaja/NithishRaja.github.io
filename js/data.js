@@ -22,3 +22,13 @@ for(let i=1;i<=pairCount;++i){
 }
 // Shuffle pair id
 pairId.sort(function(){ return Math.random() - 0.5; });
+
+// Initialise dictionary mapping pair id to corresponding image
+const pair_image_map = {
+  "default": "static/images/cover.png",
+  "0": "static/images/joker.png",
+  "1": "static/images/king_clubs.png",
+  "2": "static/images/king_diamonds.png",
+  "3": "static/images/king_spades.png",
+  "4": "static/images/king_hearts.png",
+}

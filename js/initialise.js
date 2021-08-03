@@ -41,7 +41,7 @@ if(grid){
       // Create image element
       let image = document.createElement("img");
       // Set image source
-      image.setAttribute("src", "static/images/square_small.png");
+      image.setAttribute("src", pair_image_map["default"]);
       // Add class to image
       image.classList.add("card-img-top");
       // Append image to card
