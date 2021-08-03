@@ -3,8 +3,8 @@
   *
   */
 
-// Script to add tiles to grid
-(function(){
+// Function to populate grid with tiles
+function populateGrid(){
   // Get grid
   let grid = document.getElementById("grid");
 
@@ -45,4 +45,4 @@
       grid.appendChild(row);
     }
   }
-})();
+}
