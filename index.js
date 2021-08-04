@@ -74,18 +74,28 @@ function comparePairId(){
     // Get pair id of clicked tiles
     firstTilePairId = firstTile.getAttribute("pair_id");
     secondTilePairId = secondTile.getAttribute("pair_id");
+
     // Check if clicked tiles belong to same pair
     if(firstTilePairId === secondTilePairId){
+      // Remove pair id
+      firstTile.removeAttribute("pair_id");
+      secondTile.removeAttribute("pair_id");
       // TODO: Display pair matched message
-      console.log("pair matched");
+
+      // Reset variables holding clicked tiles
+      tile_clicked_first = undefined;
+      tile_clicked_second = undefined;
     }else{
-      // Call function to reset clicked tiles
-      resetTileImage(tile_clicked_first);
-      resetTileImage(tile_clicked_second);
+      // Wait for 1 second before resetting tiles
+      setTimeout(function(){
+        // Call function to reset clicked tiles
+        resetTileImage(tile_clicked_first);
+        resetTileImage(tile_clicked_second);
+        // Reset variables holding clicked tiles
+        tile_clicked_first = undefined;
+        tile_clicked_second = undefined;
+      }, 1000);
     }
-    // Reset variables holding clicked tiles
-    tile_clicked_first = undefined;
-    tile_clicked_second = undefined;
   }
 }
 
@@ -98,15 +108,20 @@ function comparePairId(){
     let tile = document.getElementById(getTileId(id, "front"))
     // Add event listener to tile for click event
     tile.addEventListener("click", function(){
-      // Call function to update clicked tiles
-      status = updateClickedTiles(id);
-      // Check status
-      if(status){
-        // Call function to update view
-        updateView();
-        // Call function to compare pair id of selected tiles
-        comparePairId();
+      const pairId = tile.getAttribute("pair_id");
+      // Check if element has pair id
+      if(pairId){
+        console.log("clicked: "+id);
+        // Call function to update clicked tiles
+        status = updateClickedTiles(id);
+        // Check status
+        if(status){
+          // Call function to update view
+          updateView();
+          // Call function to compare pair id of selected tiles
+          comparePairId();
+        }
       }
-    });
+    }, true);
   }
 })();
