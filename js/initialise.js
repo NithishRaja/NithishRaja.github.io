@@ -30,7 +30,7 @@ function populateGrid(){
         let id = i*grid_size+j;
 
         // Create a card
-        let card = createCardElement(getTileId(id, "front"), pair_image_map["default"]);
+        let card = createCardElement(getTileId(id), pair_image_map["default"]);
         // Set pair id
         card.setAttribute("pair_id", pairId[id]);
         // Make card visible

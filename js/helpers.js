@@ -4,8 +4,8 @@
   */
 
 // Function to return id of element based on number and type
-function getTileId(number, type){
-  return "tile_"+number+"_"+type;
+function getTileId(number){
+  return "tile_"+number;
 }
 
 // Function to create a card element

@@ -33,7 +33,7 @@ function updateClickedTiles(id){
 // Function to update the tile image
 function updateTileImage(id){
   // Get tile
-  let tile = document.getElementById(getTileId(id, "front"));
+  let tile = document.getElementById(getTileId(id));
   // Get pair id of tile
   pairId = tile.getAttribute("pair_id");
   // Get image element inside tile
@@ -45,7 +45,7 @@ function updateTileImage(id){
 // Function to reset tile image
 function resetTileImage(id){
   // Get tile
-  let tile = document.getElementById(getTileId(id, "front"));
+  let tile = document.getElementById(getTileId(id));
   // Get image element inside tile
   image = tile.children[0];
   // Update image source
@@ -71,8 +71,8 @@ function comparePairId(){
   // Check if clicked tiles have been clicked
   if(tile_clicked_second !== undefined){
     // Get clicked tiles
-    firstTile = document.getElementById(getTileId(tile_clicked_first, "front"));
-    secondTile = document.getElementById(getTileId(tile_clicked_second, "front"));
+    firstTile = document.getElementById(getTileId(tile_clicked_first));
+    secondTile = document.getElementById(getTileId(tile_clicked_second));
     // Get pair id of clicked tiles
     firstTilePairId = firstTile.getAttribute("pair_id");
     secondTilePairId = secondTile.getAttribute("pair_id");
@@ -108,7 +108,7 @@ function addListenersToTiles(){
   // Iterate over tiles
   for(let id=0;id<grid_size*grid_size;++id){
     // Get tile
-    let tile = document.getElementById(getTileId(id, "front"))
+    let tile = document.getElementById(getTileId(id))
     // Add event listener to tile for click event
     tile.addEventListener("click", function(){
       const pairId = tile.getAttribute("pair_id");
