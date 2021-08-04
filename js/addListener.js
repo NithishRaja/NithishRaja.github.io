@@ -124,7 +124,8 @@ function addListenersToTiles(){
           matched = comparePairId();
           // Check if tiles matched
           if(matched){
-            console.log("tiles matched");
+            // Call function to display popup
+            displayPopup();
           }
         }
       }
