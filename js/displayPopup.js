@@ -22,7 +22,7 @@ function displayPopup(){
     // Get popup content element
     content = document.getElementById("popup_content");
     // Add text to popup content element
-    content.innerHTML = "tiles matched";
+    content.innerHTML = getTitbit();
     // Make popup visible
     popup.style.display = "block";
   }
