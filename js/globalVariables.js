@@ -25,10 +25,10 @@ pairId.sort(function(){ return Math.random() - 0.5; });
 
 // Initialise dictionary mapping pair id to corresponding image
 const pair_image_map = {
-  "default": "static/images/cover.png",
-  "0": "static/images/joker.png",
-  "1": "static/images/king_clubs.png",
-  "2": "static/images/king_diamonds.png",
-  "3": "static/images/king_spades.png",
-  "4": "static/images/king_hearts.png",
+  "default": "static/images/cover_200.png",
+  "0": "static/images/four_elements_200.png",
+  "1": "static/images/assassins_creed_200.png",
+  "2": "static/images/speed_skating_200.png",
+  "3": "static/images/crown_200.png",
+  "4": "static/images/basketball_200.png",
 }

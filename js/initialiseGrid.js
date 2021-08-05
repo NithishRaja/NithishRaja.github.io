@@ -18,6 +18,7 @@ function populateGrid(){
       row.setAttribute("id", "row_"+i);
       // Add class to row
       row.classList.add("row");
+      row.classList.add("justify-content-center")
       // Iterate over cells in current row
       for(let j=0;j<grid_size;++j){
         // Create column element
@@ -25,7 +26,8 @@ function populateGrid(){
         // Add id to col element
         col.setAttribute("id", "row_"+i+"_col_"+j);
         // Add class to col
-        col.classList.add("col");
+        col.classList.add("col-sm-2");
+        col.classList.add("col-4");
         // Initialise variable to hold id of tile
         let id = i*grid_size+j;
 
