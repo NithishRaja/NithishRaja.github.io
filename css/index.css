@@ -8,6 +8,11 @@ body{
 
 .card {
   cursor: pointer;
+  background-color: #9932cc;
+}
+
+.card-img-top {
+  border-radius: 5%;
 }
 
 #popup_background{
