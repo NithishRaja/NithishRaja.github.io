@@ -1,7 +1,7 @@
 body{
   background-image: url("../static/images/blue_aqua_turquoise.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: inherit;
+  background-size: inherit;
 }
 
 #navbar{
