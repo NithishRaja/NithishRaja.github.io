@@ -1,5 +1,7 @@
 body{
-  background-color: #7fffd4;
+  background-image: url("../static/images/blue_aqua_turquoise.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #navbar{
