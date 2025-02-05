@@ -60,6 +60,18 @@ body{
 /*  align-items: center;*/
 }
 
+.bio-link{
+  color: inherit;
+}
+
+.bio-link:hover{
+  color: inherit;
+}
+
+.bio-link:visited{
+  color: inherit;
+}
+
 .profile-img{
   border-radius: 50%;
   width: 20vw;
