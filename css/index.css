@@ -1,7 +1,7 @@
 /****
   * Main CSS file
-  * 
-  * 
+  *
+  *
   */
 
 body{
@@ -69,6 +69,18 @@ body{
 }
 
 .bio-link:visited{
+  color: inherit;
+}
+
+.paper-link{
+  color: inherit;
+}
+
+.paper-link:hover{
+  color: inherit;
+}
+
+.paper-link:visited{
   color: inherit;
 }
 
